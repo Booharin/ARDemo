@@ -15,6 +15,11 @@
 		D90DE0C021BA6D380056C5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90DE0BE21BA6D380056C5EA /* LaunchScreen.storyboard */; };
 		D90DE0CB21BA6D380056C5EA /* ARDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90DE0CA21BA6D380056C5EA /* ARDemoTests.swift */; };
 		D90DE0D621BA6D380056C5EA /* ARDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90DE0D521BA6D380056C5EA /* ARDemoUITests.swift */; };
+		D9A0773021DD15C300888F9A /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0772F21DD15C300888F9A /* Plane.swift */; };
+		D9A0773221DD190A00888F9A /* pinkWeb.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0773121DD190A00888F9A /* pinkWeb.png */; };
+		D9A0773521DE13DC00888F9A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0773421DE13DC00888F9A /* Box.swift */; };
+		D9A0773721DE1FEA00888F9A /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0773621DE1FEA00888F9A /* BitMaskCategory.swift */; };
+		D9C572B421E0C6B4004AF016 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C572B321E0C6B4004AF016 /* VirtualObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		D90DE0D121BA6D380056C5EA /* ARDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90DE0D521BA6D380056C5EA /* ARDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDemoUITests.swift; sourceTree = "<group>"; };
 		D90DE0D721BA6D380056C5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A0772F21DD15C300888F9A /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		D9A0773121DD190A00888F9A /* pinkWeb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkWeb.png; sourceTree = "<group>"; };
+		D9A0773421DE13DC00888F9A /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		D9A0773621DE1FEA00888F9A /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
+		D9C572B321E0C6B4004AF016 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,9 @@
 				D90DE0BC21BA6D380056C5EA /* Assets.xcassets */,
 				D90DE0BE21BA6D380056C5EA /* LaunchScreen.storyboard */,
 				D90DE0C121BA6D380056C5EA /* Info.plist */,
+				D9A0773121DD190A00888F9A /* pinkWeb.png */,
+				D9A0773321DE13BE00888F9A /* Entities */,
+				D9A0773621DE1FEA00888F9A /* BitMaskCategory.swift */,
 			);
 			path = ARDemo;
 			sourceTree = "<group>";
@@ -126,6 +139,16 @@
 				D90DE0D721BA6D380056C5EA /* Info.plist */,
 			);
 			path = ARDemoUITests;
+			sourceTree = "<group>";
+		};
+		D9A0773321DE13BE00888F9A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D9A0772F21DD15C300888F9A /* Plane.swift */,
+				D9A0773421DE13DC00888F9A /* Box.swift */,
+				D9C572B321E0C6B4004AF016 /* VirtualObject.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +258,7 @@
 				D90DE0B621BA6D370056C5EA /* art.scnassets in Resources */,
 				D90DE0C021BA6D380056C5EA /* LaunchScreen.storyboard in Resources */,
 				D90DE0BD21BA6D380056C5EA /* Assets.xcassets in Resources */,
+				D9A0773221DD190A00888F9A /* pinkWeb.png in Resources */,
 				D90DE0BB21BA6D370056C5EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90DE0B821BA6D370056C5EA /* ViewController.swift in Sources */,
+				D9A0773521DE13DC00888F9A /* Box.swift in Sources */,
+				D9C572B421E0C6B4004AF016 /* VirtualObject.swift in Sources */,
+				D9A0773721DE1FEA00888F9A /* BitMaskCategory.swift in Sources */,
+				D9A0773021DD15C300888F9A /* Plane.swift in Sources */,
 				D90DE0B421BA6D370056C5EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
