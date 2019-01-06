@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         sceneView.delegate = self
         // Show statistics such as fps and timing information
        // sceneView.showsStatistics = true
-        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.autoenablesDefaultLighting = true
         
         let scene = SCNScene()
@@ -89,6 +89,7 @@ class ViewController: UIViewController {
         }
         
         sceneView.scene.rootNode.addChildNode(virtualObject)
+        sceneView.debugOptions = []
     }
     
     override func viewWillAppear(_ animated: Bool) {
