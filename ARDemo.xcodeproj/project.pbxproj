@@ -15,6 +15,8 @@
 		D90DE0C021BA6D380056C5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90DE0BE21BA6D380056C5EA /* LaunchScreen.storyboard */; };
 		D90DE0CB21BA6D380056C5EA /* ARDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90DE0CA21BA6D380056C5EA /* ARDemoTests.swift */; };
 		D90DE0D621BA6D380056C5EA /* ARDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90DE0D521BA6D380056C5EA /* ARDemoUITests.swift */; };
+		D90E365621E21D2E007E46BB /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = D90E365421E21D2E007E46BB /* smoke.png */; };
+		D90E365721E21D2E007E46BB /* smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = D90E365521E21D2E007E46BB /* smoke.scnp */; };
 		D9A0773021DD15C300888F9A /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0772F21DD15C300888F9A /* Plane.swift */; };
 		D9A0773221DD190A00888F9A /* pinkWeb.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0773121DD190A00888F9A /* pinkWeb.png */; };
 		D9A0773521DE13DC00888F9A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0773421DE13DC00888F9A /* Box.swift */; };
@@ -54,6 +56,8 @@
 		D90DE0D121BA6D380056C5EA /* ARDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90DE0D521BA6D380056C5EA /* ARDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDemoUITests.swift; sourceTree = "<group>"; };
 		D90DE0D721BA6D380056C5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90E365421E21D2E007E46BB /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
+		D90E365521E21D2E007E46BB /* smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = smoke.scnp; sourceTree = "<group>"; };
 		D9A0772F21DD15C300888F9A /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		D9A0773121DD190A00888F9A /* pinkWeb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkWeb.png; sourceTree = "<group>"; };
 		D9A0773421DE13DC00888F9A /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			children = (
 				D90DE0B321BA6D370056C5EA /* AppDelegate.swift */,
 				D90DE0B521BA6D370056C5EA /* art.scnassets */,
+				D90E365321E21D0B007E46BB /* ParticleSystem */,
 				D90DE0B721BA6D370056C5EA /* ViewController.swift */,
 				D90DE0B921BA6D370056C5EA /* Main.storyboard */,
 				D90DE0BC21BA6D380056C5EA /* Assets.xcassets */,
@@ -139,6 +144,15 @@
 				D90DE0D721BA6D380056C5EA /* Info.plist */,
 			);
 			path = ARDemoUITests;
+			sourceTree = "<group>";
+		};
+		D90E365321E21D0B007E46BB /* ParticleSystem */ = {
+			isa = PBXGroup;
+			children = (
+				D90E365421E21D2E007E46BB /* smoke.png */,
+				D90E365521E21D2E007E46BB /* smoke.scnp */,
+			);
+			path = ParticleSystem;
 			sourceTree = "<group>";
 		};
 		D9A0773321DE13BE00888F9A /* Entities */ = {
@@ -256,10 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90DE0B621BA6D370056C5EA /* art.scnassets in Resources */,
+				D90E365621E21D2E007E46BB /* smoke.png in Resources */,
 				D90DE0C021BA6D380056C5EA /* LaunchScreen.storyboard in Resources */,
 				D90DE0BD21BA6D380056C5EA /* Assets.xcassets in Resources */,
 				D9A0773221DD190A00888F9A /* pinkWeb.png in Resources */,
 				D90DE0BB21BA6D370056C5EA /* Main.storyboard in Resources */,
+				D90E365721E21D2E007E46BB /* smoke.scnp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         sceneView.delegate = self
         // Show statistics such as fps and timing information
-        //sceneView.showsStatistics = true
-        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+       // sceneView.showsStatistics = true
+        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.autoenablesDefaultLighting = true
         
         let scene = SCNScene()
@@ -33,13 +33,13 @@ class ViewController: UIViewController {
     }
     
     func setupGestures() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(placeBox))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(placeVirtualObject))
         tap.numberOfTapsRequired = 1
         sceneView.addGestureRecognizer(tap)
         
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(placeVirtualObject))
-        doubleTap.numberOfTapsRequired = 2
-        sceneView.addGestureRecognizer(doubleTap)
+//        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(placeBox))
+//        doubleTap.numberOfTapsRequired = 2
+//        sceneView.addGestureRecognizer(doubleTap)
     }
     
     //MARK: - place box
@@ -63,6 +63,8 @@ class ViewController: UIViewController {
     
     //MARK: - place gun
     @objc func placeVirtualObject(tapGesture: UITapGestureRecognizer) {
+        self.sceneView.scene.removeAllParticleSystems()
+        
         guard let sceneView = tapGesture.view as? ARSCNView else { return }
         let location = tapGesture.location(in: sceneView)
         let hitTestResult = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
@@ -76,9 +78,16 @@ class ViewController: UIViewController {
                                   hitResult.worldTransform.columns.3.y,
                                   hitResult.worldTransform.columns.3.z)
         
-        let virtualObject = VirtualObject.availableObjects[1]
+        guard let virtualObject = VirtualObject.availableObjects.first else { return }
         virtualObject.position = position
         virtualObject.load()
+        
+        if let particleSystem = SCNParticleSystem(named: "smoke.scnp", inDirectory: nil),
+            let smokeNode = virtualObject.childNode(withName: "SmokeNode", recursively: true) {
+            
+            smokeNode.addParticleSystem(particleSystem)
+        }
+        
         sceneView.scene.rootNode.addChildNode(virtualObject)
     }
     
@@ -111,6 +120,9 @@ extension ViewController: ARSCNViewDelegate {
         let plane = Plane(anchor: anchor)
         self.planes.append(plane)
         node.addChildNode(plane)
+        #if DEBUG
+        print("Plane detected")
+        #endif
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
